@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Varela Round", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(171, 7, 204, 0.7), rgb(175, 98, 190));
+}
+
+.StopWatchBubbles {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.StopWatchBubbles span {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(5px);
+    animation: move 10s linear infinite;
+    z-index: -1;
+}
+
+@keyframes move {
+    100% {
+        transform: translateY(-80vh);
+    }
+}
+
+.StopWatchBubbles span.one {
+    animation-delay: 2s;
+}
+
+.StopWatchBubbles span.two {
+    animation-delay: 5s;
+}
+
+.StopWatchBubbles span.three {
+    animation-delay: 7s;
+}
+
+.StopWatchBubbles span.four {
+    animation-delay: 1.2s;
+}
+
+.StopWatchBubbles span.five {
+    animation-delay: 8s;
+}
+
+.StopWatchBubbles span.six {
+    animation-delay: 4.3;
+}
+
+.StopWatchBubbles span.seven {
+    animation-delay: 6s;
+}
+
+.StopWatchBubbles span.eight {
+    animation-delay: 1s;
+}
+
+.StopWatchWrapper {
+    user-select: none;
+}
+
+.StopWatchWrapper .StopWatchTime {
+    height: 100px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.09);
+    padding: 0 10px;
+}
+
+.StopWatchWrapper .StopWatchTime span {
+    width: 100px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+    cursor: default;
+}
+
+.StopWatchTime span.StopWatchColon {
+    width: 10px;
+}
+
+.StopWatchTime span.StopWatchMs-colons,
+.StopWatchTime span.StopWatchMilliSeconds {
+    color: rgb(171, 7, 204, 0.7);
+}
+
+.StopWatchWrapper .StopWatchButtons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.StopWatchButtons button {
+    padding: 6px 16px;
+    outline: none;
+    border: none;
+    margin: 0 5px;
+    color: rgb(171, 7, 204, 0.7);
+    background: white;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.StopWatchButtons button:hover {
+    background: azure;
+}
+
+.StopWatchButtons button.active,
+.StopWatchButtons button.stopActive {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
